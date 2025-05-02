@@ -1,0 +1,225 @@
+/* Color Palette Variables */
+:root {
+    --dark-teal: #1B4C5C;
+    --muted-teal: #5E9093;
+    --light-teal: #94C1C3;
+    --pale-aqua: #C5EDEE;
+    --seafoam-mist: #DDEEE6;
+  }
+  
+  /* Reset & Base Styling */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--dark-teal);
+    background-color: var(--seafoam-mist);
+    
+  }
+  
+  /* Navigation Bar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: var(--pale-aqua);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--dark-teal);
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: var(--dark-teal);
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: var(--muted-teal);
+  }
+  
+  /* Hero Section */
+  .hero {
+    background:url('https://t4.ftcdn.net/jpg/10/68/10/91/360_F_1068109115_XuR3WuG7yi4DVjGcEoThY0jt1pvDAv6N.jpg') no-repeat center center/cover;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .logo-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    color: var(--dark-teal);
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--dark-teal);
+  }
+  
+  .hero-content button {
+    background-color: var(--light-teal);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .hero-content button:hover {
+    background-color: var(--muted-teal);
+  }
+  
+  /* Features Section */
+  .features {
+    padding: 3rem 2rem;
+    background: white;
+    text-align: center;
+  }
+  
+  .features h2 {
+    margin-bottom: 2rem;
+    color: var(--dark-teal);
+  }
+  
+  .feature-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .card {
+    background: var(--seafoam-mist);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid var(--pale-aqua);
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  }
+  
+  .card img {
+    width: 50px;
+    margin-bottom: 1rem;
+  }
+  
+  .card h3 {
+    margin-bottom: 0.5rem;
+    color: var(--muted-teal);
+  }
+  
+  /* Testimonials Section */
+  .testimonials {
+    padding: 3rem 2rem;
+    background: var(--pale-aqua);
+    text-align: center;
+  }
+  
+  .testimonials h2 {
+    margin-bottom: 2rem;
+    color: var(--dark-teal);
+  }
+  
+  .testimonial-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  
+  .testimonial {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    max-width: 300px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  .testimonial h4 {
+    margin-top: 1rem;
+    font-style: italic;
+    color: #777;
+  }
+  
+  /* CTA Section */
+  .cta {
+    background: linear-gradient(to right, var(--pale-aqua), var(--seafoam-mist));
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  
+  .cta h2 {
+    margin-bottom: 1rem;
+    color: var(--dark-teal);
+  }
+  
+  .cta button {
+    padding: 0.8rem 1.5rem;
+    background-color: var(--light-teal);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  
+  .cta button:hover {
+    background-color: var(--muted-teal);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .nav-links {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  
+    .hero-content h1 {
+      font-size: 2.2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .feature-cards,
+    .testimonial-cards {
+      flex-direction: column;
+      display: flex;
+      align-items: center;
+    }
+  
+    .hero-content p {
+      font-size: 1rem;
+    }
+  }
+  
